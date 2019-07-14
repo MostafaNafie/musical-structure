@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Control Buttons -->
+    <style name="control_buttons">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+    <!-- List Items -->
+    <style name="album_art">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:layout_height">96dp</item>
+    </style>
+
+    <style name="song_name">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="artist_name">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+</resources>

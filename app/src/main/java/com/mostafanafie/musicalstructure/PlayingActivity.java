@@ -13,9 +13,6 @@ public class PlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing);
 
-        // Set the activity title
-        setTitle("Now Playing");
-
         // Display the song info
         TextView songNameTextView = findViewById(R.id.textView_song_name);
         songNameTextView.setText(getIntent().getStringExtra("songName"));

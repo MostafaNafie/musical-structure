@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialize the recycler view
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         // Initialize the adapter, and pass the ArrayList to it
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mSongsList);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(mSongsList);
         // Attach the adapter to the recycler view
         recyclerView.setAdapter(adapter);
         // Attach the layout manager to the recycler view

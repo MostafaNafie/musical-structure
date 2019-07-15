@@ -16,28 +16,25 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
-    private Context mContext;
     // Initialize the ArrayList
-    private ArrayList<Song> songsList;
+    private ArrayList<Song> mSongsList;
 
     // Constructor
-    public RecyclerViewAdapter(Context mContext, ArrayList<Song> songsList) {
-        this.mContext = mContext;
-        this.songsList = songsList;
+    public RecyclerViewAdapter(ArrayList<Song> songsList) {
+        this.mSongsList = songsList;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
-        ViewHolder holder = new ViewHolder(view);
-        return holder;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // Bind the songs to the view holder
-        Song song = songsList.get(position);
+        Song song = mSongsList.get(position);
         holder.songNameTextView.setText(song.getSongName());
         holder.artistNameTextView.setText(song.getArtistName());
         holder.albumArtImageView.setImageResource(song.getImageResourceId());
@@ -58,7 +55,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return songsList.size();
+        return mSongsList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
